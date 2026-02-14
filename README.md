@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+#  Nexus: Enterprise-Grade Marketplace & ERP
 
-## Getting Started
+**Nexus** es una solución integral Fullstack diseñada para la gestión de inventarios (ERP) y comercio electrónico de alto rendimiento. Construido con un enfoque en la **seguridad de tipos (Type-Safety)**, escalabilidad y una experiencia de usuario (UX) premium, siguiendo las mejores prácticas de la industria moderna.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠 Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| Tecnología | Rol |
+| :--- | :--- |
+| **Next.js 14+** | Framework de React con App Router y Server Actions. |
+| **TypeScript** | Programación robusta con tipado estricto de punta a punta. |
+| **PostgreSQL** | Base de datos relacional para integridad de datos crítica. |
+| **Drizzle ORM** | ORM ligero y Type-safe para consultas SQL eficientes. |
+| **Tailwind CSS** | Estilado atómico y responsivo. |
+| **Shadcn/UI** | Sistema de componentes accesibles y reutilizables. |
+| **NextAuth.js** | Autenticación segura y manejo de sesiones. |
+| **Zod** | Validación de esquemas y datos en tiempo de ejecución. |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+##  Estructura del Proyecto
 
-## Learn More
+El proyecto utiliza una arquitectura modular basada en **Route Groups** y separación de responsabilidades para facilitar el mantenimiento y el escalado.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+src/
+ ├── app/                    #  ROUTING & LAYOUTS (Next.js App Router)
+ │    ├── (auth)/             # Grupo: Login, Registro, Recuperación
+ │    ├── (dashboard)/        # Grupo: Panel Interno (Gestión de Inventario)
+ │    │    ├── inventory/     # Ruta: /inventory
+ │    │    └── orders/        # Ruta: /orders/[id]
+ │    ├── (shop)/             # Grupo: Vista del Cliente (Landing, Catálogo)
+ │    │    └── products/      # Ruta: /products/[slug]
+ │    ├── api/                # Endpoints de API y Webhooks (Stripe)
+ │    ├── layout.tsx          # Root Layout (Fonts, Providers, Globals)
+ │    └── globals.css         # Configuración de Tailwind & Variables CSS
+ │
+ ├── components/             # COMPONENTES REUTILIZABLES
+ │    ├── ui/                 # Componentes atómicos (Shadcn: Button, Input)
+ │    ├── dashboard/          # Componentes específicos del panel de control
+ │    ├── shop/               # Componentes de la experiencia de compra
+ │    └── shared/             # Utilidades globales (Navbars, Footer)
+ │
+ ├── server/                 #  CAPA DE DATOS Y SERVIDOR (Backend)
+ │    ├── db/                 # Configuración de Postgres y Esquemas Drizzle
+ │    ├── actions/            # Server Actions (Mutaciones: Crear, Editar, Borrar)
+ │    └── data/               # Consultas de solo lectura (Data Access Layer)
+ │
+ ├── lib/                    # UTILIDADES Y CONFIGURACIONES
+ │    ├── utils.ts            # Helper para Tailwind (cn merge)
+ │    └── auth-options.ts     # Estrategias de autenticación
+ │
+ ├── hooks/                  #  Custom Hooks para lógica de cliente
+ └── types/                  #  Definiciones globales de TypeScript
