@@ -95,63 +95,63 @@ export default function Home() {
         </section>
 
         <footer className={`bg-orange w-full rounded-xl flex flex-col items-center justify-center p-5 gap-4`}>
-            <div className={`flex flex-row justify-center gap-10 justify-start w-full p-10`}>
+            <div className={`flex flex-row  gap-10 justify-start w-full p-10`}>
                 <ul className={`${satoshi.className} flex flex-col justify-center p-5 gap-3`}>
-                    <h4 className={`text-blue font-bold text-lg  text-gray-900 font-bold`}>
+                    <h4 className={`text-blue font-bold text-lg`}>
                         Compañia
                     </h4>
                     <li>
-                        <Link href={"./about"} className={`text-blue font-bold text-lg  text-cream font-normal`}>
+                        <Link href={"./about"} className={`text-lg  text-cream font-normal`}>
                             Sobre nosotros
                         </Link>
                     </li>
                     <li>
-                        <Link href={"./contact"} className={`text-blue font-bold text-lg text-cream font-normal`}>
+                        <Link href={"./contact"} className={`text-lg text-cream font-normal`}>
                             contáctanos
                         </Link>
                     </li>
                     <li>
-                        <Link href={"./careers"} className={`text-blue font-bold text-lg text-center text-cream font-normal`}>
+                        <Link href={"./careers"} className={`text-lg text-center text-cream font-normal`}>
                             Trabaja con nosotros
                         </Link>
                     </li>
                 </ul>
                 <ul className={`${satoshi.className} flex flex-col justify-center p-5 gap-3`}>
-                    <h4 className={`text-blue font-bold text-lg  text-gray-900 font-bold`}>
+                    <h4 className={`text-blue text-lg font-bold`}>
                         Ayuda
                     </h4>
                     <li>
-                        <Link href={"./help"} className={`text-blue font-bold text-lg  text-cream font-normal`}>
+                        <Link href={"./help"} className={`text-lg  text-cream font-normal`}>
                             Centro de ayuda
                         </Link>
                     </li>
                     <li>
-                        <Link href={"./shipping"} className={`text-blue font-bold text-lg text-cream font-normal`}>
+                        <Link href={"./shipping"} className={`text-lg text-cream font-normal`}>
                             Envíos y devoluciones
                         </Link>
                     </li>
                     <li>
-                        <Link href={"./faq"} className={`text-blue font-bold text-lg text-center text-cream font-normal`}>
+                        <Link href={"./faq"} className={`text-lg text-center text-cream font-normal`}>
                             Preguntas frecuentes
                         </Link>
                     </li>
                 </ul>
                 <ul className={`${satoshi.className} flex flex-col justify-center p-5 gap-3`}>
-                    <h4 className={`text-blue font-bold text-lg  text-gray-900 font-bold`}>
+                    <h4 className={`text-blue font-bold text-lg`}>
                         Legal
                     </h4>
                     <li>
-                        <Link href={"./privacy"} className={`text-blue font-bold text-lg  text-cream font-normal`}>
+                        <Link href={"./privacy"} className={`text-lg  text-cream font-normal`}>
                             Política de privacidad
                         </Link>
                     </li>
                     <li>
-                        <Link href={"./terms"} className={`text-blue font-bold text-lg text-cream font-normal`}>
+                        <Link href={"./terms"} className={`text-lg text-cream font-normal`}>
                             Términos de servicio
                         </Link>
                     </li>
                     <li>
-                        <Link href={"./cookies"} className={`text-blue font-bold text-lg text-center text-cream font-normal`}>
+                        <Link href={"./cookies"} className={`text-lg text-cream font-normal`}>
                             Política de cookies
                         </Link>
                     </li>
