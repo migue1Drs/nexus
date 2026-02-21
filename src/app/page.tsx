@@ -13,22 +13,22 @@ export default function Home() {
 
   return (
     <div className="flex flex-col gap-10  min-h-screen min-w-full items-center justify-center bg-cream pl-5 pr-5">
-      <section className={`flex flex-col items-center justify-center p-10 gap-4 bg-gray rounded-4xl shadow-2xl`}>
-          <article className={`flex items-center justify-center gap-20 flex-1`}>
-              <div className="w-fit lg:w-1/2  flex justify-end">
-                  <Image src={"./logo.svg"} alt={"Prueba"} width={400} height={400}/>
+      <section className={`w-full flex flex-col items-center justify-center p-10 gap-4 bg-gray rounded-4xl shadow-2xl`}>
+          <article className={`w-full flex items-center   gap-20 flex-1`}>
+              <div className="flex hidden items-center justify-end lg:w-1/2 lg:block">
+                  <Image src={"./logo.svg"} alt={"Prueba"} width={400} height={400} className={`justify-items-end`}/>
               </div>
-              <div className={`w-fit lg:w-1/2 flex flex-col items-center justify-start gap-10 p-10`}>
-                  <h2 className={`${satoshi.className} text-blue font-black text-6xl text-center w-3/4x `}>Tecnologia para todos</h2>
-                  <h3 className={`${satoshi.className} text-blue-100 font-bold text-xl text-center w-3/4`}>
+              <div className={`flex flex-col w-full items-center lg:w-1/2 lg:items-start gap-10 p-10`}>
+                  <h2 className={`${satoshi.className} text-blue font-black text-6xl text-center lg:w-3/4`}>Tecnologia para todos</h2>
+                  <h3 className={`${satoshi.className} text-blue-100 font-bold text-xl text-center lg:w-3/4`}>
                       Equipos de calidad profesional a precios justos.
                   </h3>
-                  <p className={`${satoshi.className} text-blue font-normal text-lg text-justify w-3/4`}>
+                  <p className={`${satoshi.className} text-blue font-normal text-lg text-justify lg:w-3/4`}>
                       En TecnoShop, creemos que la tecnología de calidad debería ser accesible para todos. Por eso, ofrecemos una amplia gama de productos tecnológicos a precios justos, sin comprometer la calidad.
                   </p>
               </div>
           </article>
-          <div className="flex flex-row w-full justify-evenly items-center gap-4">
+          <div className="flex flex-col lg:flex-row w-full justify-evenly items-center gap-4">
               <button type={"submit"} className={"bg-blue flex items-center justify-center rounded-full p-1 hover:bg-orange transition-colors duration-300"}>
                     <h3 className={`${satoshi.className} text-cream font-bold text-lg text-center max-w-[80%]`}>
                         Explora nuestros productos
@@ -95,7 +95,7 @@ export default function Home() {
         </section>
 
         <footer className={`bg-orange w-full rounded-xl flex flex-col items-center justify-center p-5 gap-4`}>
-            <div className={`flex flex-row  gap-10 justify-start w-full p-10`}>
+            <div className={`flex flex-col lg:flex-row  gap-10 justify-start w-full p-10`}>
                 <ul className={`${satoshi.className} flex flex-col justify-center p-5 gap-3`}>
                     <h4 className={`text-blue font-bold text-lg`}>
                         Compañia
