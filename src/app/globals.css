@@ -6,7 +6,15 @@
   --color-orange: #FC563C;
   --color-gray: #6E7575;
 }
-
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
