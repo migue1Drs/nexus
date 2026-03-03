@@ -1,16 +1,8 @@
 import React from 'react'
+import { Product } from '@/types/Product';
 
 interface ProductCardProps {
-  product: {
-    id: string;
-    name: string;
-    slug: string;
-    price: number;
-    image: string;
-    colors: { name: string; hex: string }[];
-    category: string;
-    isNew: boolean;
-  };
+  product: Product;
 }
 
 export function ProductCard({ product }: ProductCardProps) {
@@ -26,7 +18,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="h-[25%] px-2 py-4 flex flex-col justify-between flex-1">
           <ul className="flex gap-2 items-center">
             {product.colors.map((color, index) => (
-              <li key={index}>
+              <li key={color.name}>
                 <span className="inline-block w-3 h-3 rounded-full border border-gray-300" style={{ backgroundColor: color.hex }}></span>
               </li>
             ))

@@ -1,5 +1,7 @@
-export const CATEGORIES = [
-  { id: '0', name: 'Todos', slug: null},
+import { Product, Category } from '@/types/Product';
+
+export const CATEGORIES: Category[] = [
+  { id: '0', name: 'Todos', slug: 'todos'},
   { id: '1', name: 'Teclados', slug: 'teclados'},
   { id: '2', name: 'Mouse', slug: 'mouse'},
   { id: '3', name: 'Audio', slug: 'audio' },
@@ -7,85 +9,126 @@ export const CATEGORIES = [
   { id: '5', name: 'Escritorio', slug: 'escritorio'},
 ];
 
-export const PRODUCTS = [
+export const PRODUCTS: Product[] = [
   {
     id: 'p1',
     name: 'Teclado Mecánico Nexus Pro',
+    description: 'Experimenta la máxima precisión y velocidad con el Teclado Mecánico Nexus Pro...',
+    brand: 'Razer',
     slug: 'teclado-mecanico-nexus-pro',
     price: 129.99,
     image: 'https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?q=80&w=800&auto=format&fit=crop',
-    colors:[
+    colors: [
       { name: 'Black Anthracite', hex: '#2c2c2c' },
       { name: 'Hourglass', hex: '#d1cfc7' },
       { name: 'Sunset Apricot', hex: '#df9e7d' },
     ],
-    category: '1',
+    category: CATEGORIES[1], 
+    rating: 4.8,
     isNew: true,
     inStock: true,
+    onSale: false,
+    isFeatured: true,
+    createdAt: '2026-02-15T10:00:00Z',
   },
   {
     id: 'p2',
     name: 'Mouse Ergonómico Stealth',
+    description: 'Un mouse ergonómico de alta precisión con sensor óptico avanzado...',
     slug: 'mouse-ergonomico-stealth',
+    brand: 'Logitech',
     price: 59.50,
     image: 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80&w=800&auto=format&fit=crop',
-    colors:[
+    colors: [
       { name: 'Black', hex: '#000000' },
       { name: 'White', hex: '#ffffff' },
     ],
-    category: '2',
+    category: CATEGORIES[2],
+    rating: 4.5,
     isNew: false,
+    inStock: true,
+    onSale: true,
+    isFeatured: false,
+    createdAt: '2026-01-20T12:00:00Z',
   },
   {
     id: 'p3',
     name: 'Silla Gamer Omega Series',
+    description: 'Una silla de juego premium con soporte lumbar ajustable...',
+    brand: 'DXRacer',
     slug: 'silla-gamer-omega-series',
     price: 349.00,
     image: 'https://images.unsplash.com/photo-1592078615290-033ee584e267?q=80&w=800&auto=format&fit=crop',
-    colors:[
+    colors: [
       { name: 'Red', hex: '#ff0000' },
       { name: 'Blue', hex: '#0000ff' },
       { name: 'Green', hex: '#00ff00' },
     ],
-    category: '4',
+    category: CATEGORIES[4],
+    rating: 4.9,
+    inStock: true,
+    onSale: false,
     isNew: true,
+    isFeatured: true,
+    createdAt: '2026-02-25T08:30:00Z',
   },
- {
+  {
     id: 'p4',
     name: 'Auriculares Studio Hi-Fi',
+    brand: 'Sony',
+    description: 'Auriculares de alta fidelidad con sonido estéreo claro y potente...',
     slug: 'auriculares-studio-hifi',
     price: 199.99,
     image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e',
-    colors:[
+    colors: [
       { name: 'Black', hex: '#000000' },
       { name: 'Silver', hex: '#c0c0c0' },
     ],
-    category: '3',
+    category: CATEGORIES[3],
+    rating: 4.7,
+    inStock: false,
+    onSale: false,
     isNew: false,
+    isFeatured: false,
+    createdAt: '2025-12-15T15:45:00Z',
   },
   {
     id: 'p5',
     name: 'Lámpara de Escritorio Minimalist',
+    description: 'Una lámpara de escritorio minimalista con diseño moderno...',
+    brand: 'Philips',
     slug: 'lampara-escritorio-minimalist',
     price: 45.00,
     image: 'https://images.unsplash.com/photo-1534073828943-f801091bb18c?q=80&w=800&auto=format&fit=crop',
-    colors:[
+    colors: [
       { name: 'White', hex: '#ffffff' },
       { name: 'Black', hex: '#000000' },
     ],
-    category: '5',
+    category: CATEGORIES[5],
+    rating: 4.2,
+    inStock: true,
+    onSale: true, 
     isNew: false,
+    isFeatured: false,
+    createdAt: '2025-11-10T09:00:00Z',
   },
   {
     id: 'p6',
     name: 'Teclado Compacto 60% RGB',
+    brand: 'Corsair',
+    description: 'Un teclado compacto del 60% con iluminación RGB personalizable...',
     slug: 'teclado-compacto-60-rgb',
     price: 85.00,
     image: 'https://images.unsplash.com/photo-1595225476474-87563907a212?q=80&w=800&auto=format&fit=crop',
-    colors:[
-      { name: 'RGB', hex: 'linear-gradient(90deg, #ff0000, #00ff00, #0000ff)' },
+    colors: [
+      { name: 'RGB', hex: '#ff00ff' }, 
     ],
-    category: '1',
+    category: CATEGORIES[1],
+    rating: 4.6,
+    inStock: true,
+    onSale: false,
     isNew: true,
+    isFeatured: true,
+    createdAt: '2026-02-27T11:20:00Z',
   }
 ];
